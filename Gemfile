@@ -39,5 +39,5 @@ end
 
 # Performance-booster for watching directories on Windows
 gem "wdm"
-gem "webrick", "~> 1.7"
+gem "webrick", "~> 1.8"
 gem "ffi", "~> 1.16.3"
