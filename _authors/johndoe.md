@@ -1,7 +1,7 @@
 ---
-name: John Doe
-username: johndoe
-bio: "Hi I a John, a Web Developer and Designer."
+name: PUNIT
+username: KING
+bio: "Hi I am PUNIT, a Web Developer and Designer."
 site: http://johndoe.com
 avatar: johndoe.png
 email: mail@johndoe.com
