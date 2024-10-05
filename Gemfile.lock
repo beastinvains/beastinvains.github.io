@@ -25,6 +25,9 @@ GEM
     google-protobuf (4.27.2-arm64-darwin)
       bigdecimal
       rake (>= 13)
+    google-protobuf (4.27.2-x64-mingw-ucrt)
+      bigdecimal
+      rake (>= 13)
     google-protobuf (4.27.2-x86_64-linux)
       bigdecimal
       rake (>= 13)
@@ -94,6 +97,8 @@ GEM
     safe_yaml (1.0.5)
     sass-embedded (1.77.5-arm64-darwin)
       google-protobuf (>= 3.25, < 5.0)
+    sass-embedded (1.77.5-x64-mingw-ucrt)
+      google-protobuf (>= 3.25, < 5.0)
     sass-embedded (1.77.5-x86_64-darwin)
       google-protobuf (>= 3.25, < 5.0)
     sass-embedded (1.77.5-x86_64-linux-gnu)
@@ -113,12 +118,13 @@ GEM
       tzinfo (>= 1.0.0)
     unicode-display_width (2.5.0)
     uri (0.13.0)
-    wdm (0.1.1)
+    wdm (0.2.0)
     webrick (1.8.1)
 
 PLATFORMS
   arm64-darwin-23
   universal-darwin-21
+  x64-mingw-ucrt
   x86_64-linux
   x86_64-linux-musl
 
@@ -140,7 +146,7 @@ DEPENDENCIES
   puma
   tzinfo (~> 2.0)
   tzinfo-data
-  wdm (~> 0.1.1)
+  wdm
   webrick (~> 1.7)
 
 BUNDLED WITH
