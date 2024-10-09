@@ -1,39 +1,36 @@
 ---
 layout: post
-title:  "Welcome to devlopr-jekyll !"
-summary: "Getting Started using devlopr-jekyll"
-author: johndoe
-date: '2019-05-22 14:35:23 +0530'
-category: jekyll
+author: KING
+title: How to make live linex usb drive
+date: 2024-10-09T14:45:49.762Z
+thumbnail-img: /assets/img/posts/034ds0hehpxygjpu93ceu5h-4.webp
+category: hacking
+summary: making usb for any live linex
+keywords: usb, hacking, linex
 thumbnail: /assets/img/posts/code.jpg
-keywords: devlopr jekyll, how to use devlopr, devlopr, how to use devlopr-jekyll, devlopr-jekyll tutorial,best jekyll themes
-permalink: /blog/welcome-to-devlopr-jekyll/
+permalink: /blog/live-linex_in_usb_drive/
 usemathjax: true
 ---
 
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+![](/assets/img/posts/img_20241007_193728.jpg)
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+l﻿ive linex command
 
-Jekyll also offers powerful support for code snippets:
+1. o﻿pen GParted
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
+   ![](/assets/img/posts/img_20241007_201838.jpg)
+2. o﻿pen terminal and enter this commands
 
-{% endhighlight %}
+```shellsession
+sudo su
+wipefs /dev/sdb
 
-or
+DEVICE OFFSET TYPE           UUID             LABEL
+sda 0x8001 iso9660 2024-08-18-14-51-59-00 Kali Live
+sda 0x1fe dos
 
-```javascript
-var a = 1;
-var b = 2;
-function sum (num1,num2){
-  return num1+num2;
-}
-var result = sum(a,b);
+wipefs -o 0x8001 -f /dev/sdb
 ```
 
+1.
