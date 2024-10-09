@@ -8,7 +8,7 @@ category: hacking
 summary: making usb for any live linex
 keywords: usb, hacking, linex
 thumbnail: /assets/img/posts/code.jpg
-permalink: /blog/welcome-to-devlopr-jekyll/
+permalink: /blog/live-linex_in_usb_drive/
 usemathjax: true
 ---
 
