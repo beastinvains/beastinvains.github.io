@@ -11,11 +11,15 @@ thumbnail: /assets/img/posts/code.jpg
 permalink: /blog/live-linex_in_usb_drive/
 usemathjax: true
 ---
+
+
 ![](/assets/img/posts/img_20241007_193728.jpg)
 
 l﻿ive linex command
 
 1. o﻿pen GParted
+
+   ![](/assets/img/posts/img_20241007_201838.jpg)
 2. o﻿pen terminal and enter this commands
 
 ```shellsession
