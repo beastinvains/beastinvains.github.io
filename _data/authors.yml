@@ -1,34 +1,35 @@
 # Add Authors here
-johndoe:
-   name: John Doe
-   username: johndoe
-   site: http://johndoe.com
+punit:
+   name: PUNIT
+   username: KING
+   bio: "Hi I am PUNIT, a computer nerd."
+   site: https://beastinvains.github.io/#/
    avatar: johndoe.png
-   bio: "Hi I a John, a Web Developer and Designer."
-   email: mail@johndoe.com
+   email: punitsharma.8022@gmail.com
    social:
-      - title: "github"
-        url: "https://github.com/johndoe"
-      - title: "linkedin"
-        url: "https://www.linkedin.com/in/johndoe"
-      - title: "youtube"
-        url: "https://www.youtube.com/channel/UCSfLBFFfNU9r6ihfei6VeJw"
-      - title: "facebook"
-        url: "https://www.facebook.com/johndoe"
-      - title: "twitter"
-        url: "https://www.twitter.com/johndoe"
-      - title: "behance"
-        url: "https://behance.com/johndoe"
-      - title: "instagram"
-        url: "https://instagram.com/johndoe"
-      - title: "medium"
-        url: "https://medium.com/johndoe"
-      - title: "telegram"
-        url: "https://telegram.com/johndoe"
-      - title: "dribbble"
-        url: "https://dribbble.com/johndoe"
-      - title: "flickr"
-        url: "https://flickr.com/johndoe"
+    -   title: "github"
+        url: "https://github.com/beastinvains"
+    -   title: "linkedin"
+        url: "https://www.linkedin.com/in/"
+    -   title: "youtube"
+        url: "https://www.youtube.comchannel/UCSfLBFFfNU9r6ihfei6VeJw"
+    -   title: "facebook"
+        url: "https://www.facebook.com/"
+    -   title: "twitter"
+        url: "https://www.twitter.com/"
+    -   title: "behance"
+        url: "https://behance.com/e"
+    -   title: "instagram"
+        url: "https://instagram.com/punit_bytes"
+    -   title: "medium"
+        url: "https://medium.com/"
+    -   title: "telegram"
+        url: "https://telegram.com/"
+    -   title: "dribbble"
+        url: "https://dribbble.com/"
+    -   title: "flickr"
+        url: "https://flickr.com/"
+
 
 xplor4r:
    name: Sujay kundu
