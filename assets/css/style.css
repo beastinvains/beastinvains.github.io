@@ -6330,6 +6330,8 @@ html.direction--rtl pre {
 }
 
 .post-title {
+  font-size: 32px;
+  font-weight: bold;
   text-align: left;
 }
 .theme--dark .post-title {
@@ -6342,16 +6344,11 @@ html.direction--rtl pre {
 .post-description {
   margin-top: 1em;
   font-size: 18.4px;
+  color: #c834db;
   overflow: hidden;
   width: 100%;
   margin-bottom: 1em;
   margin-left: 0.5em;
-}
-.theme--dark .post-description {
-  color: #DAE4ED;
-}
-.theme--light .post-description {
-  color: #1E2227;
 }
 .post-description:after {
   content: "_";
