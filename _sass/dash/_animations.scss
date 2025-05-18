@@ -1,0 +1,18 @@
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes rainbow {
+  0% { color: red; }
+  16.67% { color: orange; }
+  33.33% { color: yellow; }
+  50% { color: green; }
+  66.67% { color: blue; }
+  83.33% { color: indigo; }
+  100% { color: violet; }
+}
+
+@keyframes type{
+  from { width: 0; }
+}
