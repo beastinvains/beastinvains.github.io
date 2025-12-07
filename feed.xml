@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-12-07T20:30:16+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">PUNIT</title><subtitle>hi it&apos;s PUNIT Welcome to my personal space on the web! I created this site to share my achievements,  showcase my projects, and post updates about my journey through life, tech, and everything in between. Thanks for stopping by—feel free to explore!
+</subtitle><author><name>PUNIT SHARMA</name></author><entry><title type="html">how to make persistence drive</title><link href="http://localhost:4000/2020/02/02/How-make-Linex-Persistent-drive.html" rel="alternate" type="text/html" title="how to make persistence drive" /><published>2020-02-02T00:00:00+05:30</published><updated>2020-02-02T00:00:00+05:30</updated><id>http://localhost:4000/2020/02/02/How-make-Linex-Persistent-drive</id><content type="html" xml:base="http://localhost:4000/2020/02/02/How-make-Linex-Persistent-drive.html"><![CDATA[<p>I’ll show you how to create a Kali Linux persistent drive, but you can use this method to make a persistent drive for any Linux version. I’ve personally tried it with Parrot OS and Ubuntu.</p>
+
+<blockquote>
+  <ul>
+    <li>Requirements</li>
+  </ul>
+</blockquote>
+
+<ol>
+  <li>any storage devices more then 20gb.</li>
+  <li>computer 🤷🏼‍♂️.</li>
+</ol>
+
+<blockquote>
+  <ul>
+    <li>Preparation of Drive</li>
+  </ul>
+</blockquote>
+
+<ol>
+  <li>
+    <p>Download linex live iso file. <a href="https://www.kali.org/get-kali/#kali-live">LIVE iso file is very importent</a></p>
+
+    <p><img src="/assets/blog_image/presistence_drive/1.png" alt="Another image" style="width: 500px; height: auto;" /></p>
+  </li>
+  <li>
+    <p>download <a href="https://etcher.balena.io/">etcher balena</a>  to write image on drive.
+ <img src="/assets/blog_image/presistence_drive/2.png" alt="Another image" style="width: 500px; height: auto;" /></p>
+  </li>
+  <li>
+    <p>open etcher balena to etch iso file to your drive
+ <img src="/assets/blog_image/presistence_drive/4.png" alt="Another image" style="width: 500px; height: auto;" /></p>
+  </li>
+</ol>
+
+<h3 id="your-drive-is-now-readyyou-can-boot-and-use-linux-on-any-compatible-computer">Your drive is now ready—you can boot and use Linux on any compatible computer.</h3>
+
+<h1 id="adding-presistence"><strong><em>adding presistence</em></strong></h1>
+<ol>
+  <li>
+    <p>boot your linex drive with live system mode.
+ <img src="/assets/blog_image/presistence_drive/IMG_20241007_193728.jpg" alt="Another image" style="width: 500px; height: auto;" /></p>
+  </li>
+  <li>Open GParted on your Linux system.
+ <img src="/assets/blog_image/presistence_drive/IMG_20241007_202222.jpg" alt="Another image" style="width: 500px; height: auto;" />
+.\</li>
+  <li>
+    <p>make new partiton name :- ** persistence **
+<img src="/assets/blog_image/presistence_drive/IMG_20241007_202459.jpg" alt="Another image" style="width: 500px; height: auto;" /></p>
+  </li>
+  <li>your terminal will look like this
+<img src="/assets/blog_image/presistence_drive/IMG_20241007_203046.jpg" alt="Another image" style="width: 500px; height: auto;" /></li>
+</ol>
+
+<p>open terminal</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">if</span> <span class="n">you</span> <span class="n">have</span> <span class="n">multipal</span> <span class="n">drive</span> <span class="k">then</span> <span class="nb">name</span> <span class="n">will</span> <span class="n">change</span>
+ <span class="n">first</span> <span class="n">step</span> <span class="n">code</span>
+ <span class="n">sudo</span> <span class="n">su</span>
+  
+ <span class="n">wipefs</span> <span class="sr">/dev/s</span><span class="n">da</span>
+
+ <span class="n">wipefs</span> <span class="o">-</span><span class="n">o</span> <span class="mh">0x8001</span> <span class="o">-</span><span class="n">f</span> <span class="sr">/dev/s</span><span class="n">da</span>
+
+ <span class="n">second</span> <span class="n">step</span> <span class="n">code</span>
+
+ <span class="n">mkdir</span> <span class="o">-</span><span class="nb">p</span> <span class="sr">/mnt/us</span><span class="n">b</span>
+
+ <span class="n">mount</span> <span class="sr">/dev/s</span><span class="n">da3</span> <span class="sr">/mnt/us</span><span class="n">b</span>
+
+ <span class="n">echo</span> <span class="s2">"/ union"</span> <span class="o">&gt;</span> <span class="n">persistence</span><span class="p">.</span><span class="nf">conf</span>
+
+
+</code></pre></div></div>
+
+<p>-now boot drive on persistence mode</p>
+
+<p><img src="/assets/blog_image/presistence_drive/IMG_20241007_203646.jpg" alt="Another image" style="width: 500px; height: auto;" /></p>]]></content><author><name>PUNIT SHARMA</name></author><category term="miscellaneous" /><summary type="html"><![CDATA[Linux is my favorite operating system, but I often forget how to set up my Linux drive. This post is a simple guide to help anyone who wants to install Linux and keep their data safe during the process.]]></summary></entry><entry><title type="html">zusy_trojan</title><link href="http://localhost:4000/2020/02/01/zues_tro.html" rel="alternate" type="text/html" title="zusy_trojan" /><published>2020-02-01T00:00:00+05:30</published><updated>2020-02-01T00:00:00+05:30</updated><id>http://localhost:4000/2020/02/01/zues_tro</id><content type="html" xml:base="http://localhost:4000/2020/02/01/zues_tro.html"><![CDATA[]]></content><author><name>PUNIT SHARMA</name></author><category term="malware_analis" /><summary type="html"><![CDATA[malware analis]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/2019/04/16/welcome-to-jekyll2.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-04-16T00:00:00+05:30</published><updated>2019-04-16T00:00:00+05:30</updated><id>http://localhost:4000/2019/04/16/welcome-to-jekyll2</id><content type="html" xml:base="http://localhost:4000/2019/04/16/welcome-to-jekyll2.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Syntax</th>
+      <th style="text-align: center">Description</th>
+      <th style="text-align: right">Test Text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Header</td>
+      <td style="text-align: center">Title</td>
+      <td style="text-align: right">Here’s this</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Paragraph</td>
+      <td style="text-align: center">Text</td>
+      <td style="text-align: right">And more</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><del>The world is flat.</del></p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Write the press release</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Update the website</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Contact the media</li>
+</ul>
+
+<p>H<sub>2</sub>O</p>
+
+<p>X<sup>2</sup></p>
+
+<p>I need to highlight these <mark>very important words</mark>.</p>
+
+<ul>
+  <li>Chris Wayne</li>
+</ul>
+
+<blockquote>
+  <p>“This is a quote which should be followed”
+Also I think this sentence is quite long.
+more quote text to come</p>
+  <ul>
+    <li>Chris Wayne</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>Single line quote</p>
+</blockquote>
+
+<p>However, these are bulletpoints:</p>
+
+<ul>
+  <li>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</li>
+  <li>another point</li>
+  <li>that’s it</li>
+</ul>
+
+<p>However, these entries should not be styled:</p>
+
+<ol>
+  <li>an entry</li>
+  <li>another entry</li>
+  <li>that’s another entry</li>
+</ol>
+
+<video preload="auto" poster="https://pbs.twimg.com/tweet_video_thumb/D5aj3tfW0AIiSxo.jpg" src="https://video.twimg.com/tweet_video/D5aj3tfW0AIiSxo.mp4" type="video/mp4" autoplay="" controls=""></video>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span>
+</code></pre></div></div>
+<h2 id="hi">hi</h2>
+<h3 id="hi3">hi3</h3>
+<h5 id="hi5">hi5</h5>
+<h1 id="an-interesting-fact-on-the-economy-of-modern-america">An interesting fact on the economy of modern America</h1>
+
+<p>Pictures look like this:</p>
+
+<p><img src="https://picsum.photos/200" alt="image" class="modal" /></p>
+
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/jekyll?src=hash&amp;ref_src=twsrc%5Etfw">#jekyll</a> <a href="https://twitter.com/hashtag/dash?src=hash&amp;ref_src=twsrc%5Etfw">#dash</a> now officially supports both, dark and light theming. Enjoy!<a href="https://t.co/4evp9pX2Ws">https://t.co/4evp9pX2Ws</a> <a href="https://t.co/vOQCZjGKic">pic.twitter.com/vOQCZjGKic</a></p>&mdash; 〽️ɪɢᴜᴇʟ (@bitbrain_) <a href="https://twitter.com/bitbrain_/status/1166440978124877827?ref_src=twsrc%5Etfw">August 27, 2019</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>]]></content><author><name>PUNIT SHARMA</name></author><category term="welcome" /><category term="introduction" /><summary type="html"><![CDATA[this article explains something and gives a brief introduction.]]></summary></entry><entry><title type="html">PUNIT C.V</title><link href="http://localhost:4000/2019/01/01/punit-cv.html" rel="alternate" type="text/html" title="PUNIT C.V" /><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><id>http://localhost:4000/2019/01/01/punit-cv</id><content type="html" xml:base="http://localhost:4000/2019/01/01/punit-cv.html"><![CDATA[<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">NAME</span> <span class="p">:</span><span class="o">-</span> <span class="no">PUNIT</span> <span class="no">SHARMA</span>
+<span class="no">D</span><span class="o">.</span><span class="no">O</span><span class="o">.</span><span class="no">B</span> <span class="p">:</span><span class="o">-</span> <span class="mo">02</span><span class="o">/</span><span class="mo">04</span><span class="o">/</span><span class="mi">2007</span>
+<span class="no">EMAIL</span> <span class="p">:</span><span class="o">-</span> <span class="n">punitsharma</span><span class="o">.</span><span class="mi">8022</span><span class="vi">@gmail</span><span class="p">.</span><span class="nf">com</span>
+<span class="no">PHONE</span> <span class="n">no</span><span class="o">.</span> <span class="mi">8130505020</span>
+<span class="no">SEX</span> <span class="p">:</span><span class="o">-</span> <span class="n">male</span>
+<span class="no">ADDRESS</span> <span class="p">:</span><span class="o">-</span> <span class="no">A</span><span class="o">-</span><span class="mi">402</span><span class="p">,</span><span class="n">jain</span> <span class="n">nagar</span><span class="p">,</span><span class="n">karala</span><span class="p">,</span> <span class="no">DELHI</span><span class="o">-</span><span class="mi">110081</span> <span class="no">BHARAT</span>
+</code></pre></div></div>
+<!-- start of skills -->
+<blockquote>
+  <p>SKILLS</p>
+</blockquote>
+
+<div style="display: flex; justify-content: space-between;">
+    <div style="width: 45%;">
+        <ul>
+            <li>Bug bounty hunting</li>
+            <li>Security frameworks and controls</li>
+            <li>SIEM tools</li>
+            <li>Python</li>
+            <li>C#</li>
+        </ul>
+    </div>
+    <div style="width: 45%;">
+        <ul>
+            <li>Threats, risks, and vulnerabilities</li>
+            <li>Linux command line</li>
+            <li>SQL</li>
+            <li>C++ basic</li>
+        </ul>
+    </div>
+</div>
+
+<blockquote>
+  <p>EDUCATION</p>
+</blockquote>
+
+<ul>
+<li> <a href="https://ipucet2025.nielit.in/PDFViewer.jsp?pdf=201916">IPU CUET RANK 357</a> </li>
+<li> <a href="https://coursera.org/share/4ba970ab27866dd2909718d84d1f329c">Google Cybersecurity Professional Certificate</a> </li>
+<li>
+ <a href="https://t.co/elWmQ3pinL">Bug Bounty Hunting &amp; Web Security Testing</a></li>
+</ul>
+
+<style>
+table, th, td {
+     
+  border:1px solid pink;
+}
+</style>
+
+<table style="width:100%">
+  <tr>
+    <th>LEVAL</th>
+    <th>INSTITUTION</th>
+    <th>GRADE</th>
+  </tr>
+  <tr>
+    <td>class 10</td>
+    <td>G.C.S.V</td>
+    <td>81%</td>
+  </tr>
+      <tr>
+       <td>CLASS 12</td>
+       <td>G.C.S.V</td>
+       <td>75% with maths</td>
+    </tr>
+</table>
+
+<blockquote>
+  <p>PROJECTS
+— asdasd</p>
+</blockquote>
+<ul>
+
+        <li> <a href="http://beastinvains.github.io">hosting website</a> </li>
+        <li> <a href="https://beastinvains.github.io/tag/malware_analis/">malware analysis</a> </li>
+        <li> <a href="https://t.co/elWmQ3pinL">wazuh siem SETUP</a> </li>
+        <li> <a href="https://punit247.itch.io/2-for-1">GAME MADE</a> </li>
+
+</ul>
+
+<blockquote>
+  <p>WORK EXPERIENCE</p>
+</blockquote>
+
+<blockquote>
+  <p>Professional Summary</p>
+</blockquote>
+
+<ul>
+  <li>Detail-oriented cybersecurity professional dedicated to protecting organizations and the people they serve. Knowledgeable about NIST frameworks and able to implement security controls to ensure compliance with international regulations related to data protection. Experience with identifying threats, risks, and vulnerabilities; security hardening: threat modeling: and incident escalation and response. Proficient in the use of Linux command line, SQL, and Python. Strong communication and problem-solving skills. Recently completed the Google Cybersecurity Certificate, a rigorous, skills-based program that covers key cybersecurity knowledge and skills</li>
+</ul>]]></content><author><name>PUNIT SHARMA</name></author><category term="welcome" /><summary type="html"><![CDATA[NAME :- PUNIT SHARMA D.O.B :- 02/04/2007 EMAIL :- punitsharma.8022@gmail.com PHONE no. 8130505020 SEX :- male ADDRESS :- A-402,jain nagar,karala, DELHI-110081 BHARAT SKILLS]]></summary></entry></feed>
