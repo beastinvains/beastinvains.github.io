@@ -1,5 +1,176 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-12-07T20:30:16+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">PUNIT</title><subtitle>hi it&apos;s PUNIT Welcome to my personal space on the web! I created this site to share my achievements,  showcase my projects, and post updates about my journey through life, tech, and everything in between. Thanks for stopping by—feel free to explore!
-</subtitle><author><name>PUNIT SHARMA</name></author><entry><title type="html">how to make persistence drive</title><link href="http://localhost:4000/2020/02/02/How-make-Linex-Persistent-drive.html" rel="alternate" type="text/html" title="how to make persistence drive" /><published>2020-02-02T00:00:00+05:30</published><updated>2020-02-02T00:00:00+05:30</updated><id>http://localhost:4000/2020/02/02/How-make-Linex-Persistent-drive</id><content type="html" xml:base="http://localhost:4000/2020/02/02/How-make-Linex-Persistent-drive.html"><![CDATA[<p>I’ll show you how to create a Kali Linux persistent drive, but you can use this method to make a persistent drive for any Linux version. I’ve personally tried it with Parrot OS and Ubuntu.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-12-08T20:41:55+05:30</updated><id>/feed.xml</id><title type="html">PUNIT</title><subtitle>hi it&apos;s PUNIT Welcome to my personal space on the web! I created this site to share my achievements,  showcase my projects, and post updates about my journey through life, tech, and everything in between. Thanks for stopping by—feel free to explore!
+</subtitle><author><name>PUNIT SHARMA</name></author><entry><title type="html">🛡️ Malware Analysis Lab Setup Guide</title><link href="/analysis/2025/11/01/Malware-Analysis-Lab.html" rel="alternate" type="text/html" title="🛡️ Malware Analysis Lab Setup Guide" /><published>2025-11-01T00:00:00+05:30</published><updated>2025-11-01T00:00:00+05:30</updated><id>/analysis/2025/11/01/Malware-Analysis-Lab</id><content type="html" xml:base="/analysis/2025/11/01/Malware-Analysis-Lab.html"><![CDATA[<p><br /></p>
+
+<p>A malware analysis lab allows you to safely study malware behaviour inside an isolated environment without risking your real machine or network.<br />
+This guide walks you through setting up a complete lab using:</p>
+
+<ul>
+  <li><strong>FLARE VM</strong> (Windows malware analysis platform)</li>
+  <li><strong>REMnux</strong> (Linux reverse-engineering distro)</li>
+  <li><strong>INetSim / FakeDNS</strong> for fake internet responses</li>
+  <li><strong>VMware / VirtualBox</strong> isolated networks</li>
+</ul>
+
+<p>All steps include screenshots from my own setup.</p>
+
+<hr />
+
+<h1 id="-requirements">🧰 Requirements</h1>
+
+<p>Before you begin, ensure you have:</p>
+
+<ul>
+  <li><strong>70+ GB disk space</strong> for FLARE VM</li>
+  <li><strong>8 GB RAM minimum</strong> (16 GB recommended)</li>
+  <li>A system capable of running 2–3 VMs</li>
+  <li>Basic understanding of VMs</li>
+  <li>Patience — FLARE VM installation takes hours</li>
+</ul>
+
+<hr />
+
+<h1 id="-files-you-need-to-download">📥 Files You Need to Download</h1>
+
+<ol>
+  <li>Windows ISO</li>
+  <li>VMware Workstation or <a href="https://www.virtualbox.org/">VirtualBox</a></li>
+  <li>REMnux <code class="language-plaintext highlighter-rouge">.ova</code> appliance</li>
+  <li>FLARE VM install script</li>
+</ol>
+
+<hr />
+
+<h1 id="-setting-up-flare-vm-windows">🪟 Setting Up FLARE VM (Windows)</h1>
+
+<h2 id="step-1-download-the-installer">Step 1: Download the Installer</h2>
+
+<p>Open <strong>PowerShell as Administrator</strong> and run:</p>
+
+<p><img src="/assets/blog_image/malware_lab/flarevm2.png" style="width: 520px; height: auto;" /></p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="n">new-object</span><span class="w"> </span><span class="nx">net.webclient</span><span class="p">)</span><span class="o">.</span><span class="nf">DownloadFile</span><span class="p">(</span><span class="w">
+</span><span class="s1">'https://raw.githubusercontent.com/mandiant/flare-vm/master/install.ps1'</span><span class="p">,</span><span class="w">
+</span><span class="s2">"</span><span class="si">$(</span><span class="p">[</span><span class="n">Environment</span><span class="p">]::</span><span class="n">GetFolderPath</span><span class="p">(</span><span class="s1">'Desktop'</span><span class="si">)</span><span class="s2">)\install.ps1"</span><span class="w">
+</span><span class="p">)</span><span class="w">
+
+</span><span class="n">Unblock-File</span><span class="w"> </span><span class="o">.</span><span class="nx">\install.ps1</span><span class="w">
+</span><span class="n">Set-ExecutionPolicy</span><span class="w"> </span><span class="nx">Unrestricted</span><span class="w"> </span><span class="nt">-Force</span><span class="w">
+
+</span><span class="o">.</span><span class="n">\install.ps1</span><span class="w">
+</span><span class="nx">Step</span><span class="w"> </span><span class="nx">2:</span><span class="w"> </span><span class="nx">Choose</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">Packages</span><span class="w">
+</span><span class="n">After</span><span class="w"> </span><span class="nx">running</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">installer</span><span class="p">,</span><span class="w"> </span><span class="nx">FLARE</span><span class="w"> </span><span class="nx">VM</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">show</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">package</span><span class="w"> </span><span class="nx">selection</span><span class="w"> </span><span class="nx">screen:</span><span class="w">
+</span></code></pre></div></div>
+<p><img src="/assets/blog_image/malware_lab/flarevm3.png" style="width: 520px; height: auto;" /></p>
+
+<h3 id="click-install">Click Install.</h3>
+<p><mark style="background-color: #FF6347;">⚠️ Note: Installation takes many hours (sometimes 6–12 hours).
+Your VM will reboot many times — this is completely normal.</mark></p>
+
+<h2 id="setting-ws">setting W.S</h2>
+<p>turn off windows defender firewall in both dir.</p>
+
+<p><img src="/assets/blog_image/malware_lab/security.png" style="width: 900px; height: auto;" />
+and enable [turn off windows antivirus]</p>
+
+<p><img src="/assets/blog_image/malware_lab/security2.png" style="width: 800px; height: auto;" /></p>
+
+<h3 id="network-setup">network setup</h3>
+<p><img src="/assets/blog_image/malware_lab/Screenshot_2025-12-08_19-38-59.png" style="width: 400px; height: auto;" />
+<img src="/assets/blog_image/malware_lab/Screenshot_2025-12-08_19-36-40.png" style="width: 400px; height: auto;" /></p>
+<h1 id="-network-setup-virtual-machines">🌐 Network Setup (Virtual Machines)</h1>
+
+<p>This part is extremely important because malware MUST NEVER touch your real network.</p>
+
+<p>You will configure a Host-Only network, meaning:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Malware cannot access the internet</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />FLARE VM ↔ REMnux can communicate privately</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />INetSim can simulate fake internet services</li>
+</ul>
+
+<h2 id="️-network-setup-virtualbox">🖥️ Network Setup (VirtualBox)</h2>
+<p>Step 1: Open VirtualBox Network Manager</p>
+
+<p><img src="/assets/blog_image/malware_lab/network1.png" style="width: 420px; height: auto;" /></p>
+
+<p>Step 2: Create Host-Only Network</p>
+
+<p><img src="/assets/blog_image/malware_lab/network2.png" style="width: 450px; height: auto;" /></p>
+
+<p>Use:</p>
+
+<p>IPv4 Address: 10.0.0.1</p>
+
+<p>Subnet Mask: 255.255.255.0</p>
+
+<p>Step 3: Configure DHCP</p>
+
+<p><img src="/assets/blog_image/malware_lab/network3.png" style="width: 520px; height: auto;" /></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Use:
+nginx 
+Copy code 
+Server Address: 10.0.0.2 
+Server Mask:    255.255.255.0 
+Lower Bound:    10.0.0.3 
+Upper Bound:    10.0.0.254 
+</code></pre></div></div>
+<h3 id="️-network-setup-vmware-workstation">🖥️ Network Setup (VMware Workstation)</h3>
+<p>Step 1: Open Virtual Network Editor
+Go to:</p>
+
+<p>Copy code
+Edit → Virtual Network Editor
+<img src="/assets/blog_image/malware_lab/Capture.PNG" style="width: 720px; height: auto;" /></p>
+
+<p>Step 2: Create a Host-Only Network (VMnet3 recommended)
+Use:</p>
+
+<div class="language-nginx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Subnet</span> <span class="s">IP:</span>     <span class="mf">10.0</span><span class="s">.0.0</span>
+<span class="s">Subnet</span> <span class="s">Mask:</span>   <span class="mf">255.255</span><span class="s">.255.0</span>
+<span class="s">DHCP</span> <span class="s">enabled</span> 
+<span class="s">VMware</span> <span class="s">automatically</span> <span class="s">assigns</span> <span class="s">.1</span> <span class="s">and</span> <span class="s">.2,</span> <span class="s">so</span> <span class="s">you</span> <span class="s">don't</span> <span class="s">need</span> <span class="s">to</span> <span class="s">set</span> <span class="s">server</span> <span class="s">IP</span> <span class="s">manually.</span>
+<span class="s">starting</span> <span class="s">ip</span> <span class="s">add:</span> <span class="mf">10.0</span><span class="s">.0.3</span>
+<span class="s">ending</span> <span class="s">ip</span> <span class="s">add:</span> <span class="mf">10.0</span><span class="s">.0.254</span>
+</code></pre></div></div>
+<h1 id="-installing-remnux">🐧 Installing REMnux</h1>
+<p>Open Import Appliance in VMware or VirtualBox</p>
+
+<p>Select the remnux.ova file</p>
+
+<p>Choose storage location</p>
+
+<p>Start the VM
+<img src="/assets/blog_image/malware_lab/rumnux1.png" style="width: 800px; height: auto;" /></p>
+<h2 id="setting-network">setting network</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /etc/inetsim
+sudo nano inetsim.conf
+</code></pre></div></div>
+<p><img src="/assets/blog_image/malware_lab/remnux2.png" style="width: 400px; height: auto;" />
+<img src="/assets/blog_image/malware_lab/remnux3.png" style="width: 400px; height: auto;" />
+<img src="/assets/blog_image/malware_lab/remnux4.png" style="width: 400px; height: auto;" /></p>
+
+<h1 id="-your-malware-analysis-lab-is-ready">🎉 Your Malware Analysis Lab Is Ready!</h1>
+
+<p>You now have:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />FLARE VM fully installed</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />REMnux imported and configured</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Host-only isolated network</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Fake internet simulation (INetSim + FakeDNS)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Safe environment for analyzing malware</li>
+</ul>
+
+<p>You can now begin:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Static malware analysis
+
+Dynamic analysis
+
+Network traffic monitoring
+
+Behavioural analysis
+</code></pre></div></div>]]></content><author><name>PUNIT SHARMA</name></author><category term="analysis" /><category term="malware_analysis" /><summary type="html"><![CDATA[A complete beginner-friendly guide to building a safe, isolated malware analysis lab using VMware, FLARE VM, and REMnux. Includes network setup, INetSim configuration, and fake internet simulation.]]></summary></entry><entry><title type="html">how to make persistence drive</title><link href="/2020/02/02/How-make-Linex-Persistent-drive.html" rel="alternate" type="text/html" title="how to make persistence drive" /><published>2020-02-02T00:00:00+05:30</published><updated>2020-02-02T00:00:00+05:30</updated><id>/2020/02/02/How-make-Linex-Persistent-drive</id><content type="html" xml:base="/2020/02/02/How-make-Linex-Persistent-drive.html"><![CDATA[<p>I’ll show you how to create a Kali Linux persistent drive, but you can use this method to make a persistent drive for any Linux version. I’ve personally tried it with Parrot OS and Ubuntu.</p>
 
 <blockquote>
   <ul>
@@ -76,7 +247,7 @@
 
 <p>-now boot drive on persistence mode</p>
 
-<p><img src="/assets/blog_image/presistence_drive/IMG_20241007_203646.jpg" alt="Another image" style="width: 500px; height: auto;" /></p>]]></content><author><name>PUNIT SHARMA</name></author><category term="miscellaneous" /><summary type="html"><![CDATA[Linux is my favorite operating system, but I often forget how to set up my Linux drive. This post is a simple guide to help anyone who wants to install Linux and keep their data safe during the process.]]></summary></entry><entry><title type="html">zusy_trojan</title><link href="http://localhost:4000/2020/02/01/zues_tro.html" rel="alternate" type="text/html" title="zusy_trojan" /><published>2020-02-01T00:00:00+05:30</published><updated>2020-02-01T00:00:00+05:30</updated><id>http://localhost:4000/2020/02/01/zues_tro</id><content type="html" xml:base="http://localhost:4000/2020/02/01/zues_tro.html"><![CDATA[]]></content><author><name>PUNIT SHARMA</name></author><category term="malware_analis" /><summary type="html"><![CDATA[malware analis]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/2019/04/16/welcome-to-jekyll2.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-04-16T00:00:00+05:30</published><updated>2019-04-16T00:00:00+05:30</updated><id>http://localhost:4000/2019/04/16/welcome-to-jekyll2</id><content type="html" xml:base="http://localhost:4000/2019/04/16/welcome-to-jekyll2.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<p><img src="/assets/blog_image/presistence_drive/IMG_20241007_203646.jpg" alt="Another image" style="width: 500px; height: auto;" /></p>]]></content><author><name>PUNIT SHARMA</name></author><category term="miscellaneous" /><summary type="html"><![CDATA[Linux is my favorite operating system, but I often forget how to set up my Linux drive. This post is a simple guide to help anyone who wants to install Linux and keep their data safe during the process.]]></summary></entry><entry><title type="html">zusy_trojan</title><link href="/2020/02/01/zues_tro.html" rel="alternate" type="text/html" title="zusy_trojan" /><published>2020-02-01T00:00:00+05:30</published><updated>2020-02-01T00:00:00+05:30</updated><id>/2020/02/01/zues_tro</id><content type="html" xml:base="/2020/02/01/zues_tro.html"><![CDATA[]]></content><author><name>PUNIT SHARMA</name></author><category term="malware_analysis" /><summary type="html"><![CDATA[malware analis]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="/2019/04/16/welcome-to-jekyll2.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-04-16T00:00:00+05:30</published><updated>2019-04-16T00:00:00+05:30</updated><id>/2019/04/16/welcome-to-jekyll2</id><content type="html" xml:base="/2019/04/16/welcome-to-jekyll2.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <p>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
 
@@ -178,7 +349,7 @@ more quote text to come</p>
 <p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/jekyll?src=hash&amp;ref_src=twsrc%5Etfw">#jekyll</a> <a href="https://twitter.com/hashtag/dash?src=hash&amp;ref_src=twsrc%5Etfw">#dash</a> now officially supports both, dark and light theming. Enjoy!<a href="https://t.co/4evp9pX2Ws">https://t.co/4evp9pX2Ws</a> <a href="https://t.co/vOQCZjGKic">pic.twitter.com/vOQCZjGKic</a></p>&mdash; 〽️ɪɢᴜᴇʟ (@bitbrain_) <a href="https://twitter.com/bitbrain_/status/1166440978124877827?ref_src=twsrc%5Etfw">August 27, 2019</a></blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>]]></content><author><name>PUNIT SHARMA</name></author><category term="welcome" /><category term="introduction" /><summary type="html"><![CDATA[this article explains something and gives a brief introduction.]]></summary></entry><entry><title type="html">PUNIT C.V</title><link href="http://localhost:4000/2019/01/01/punit-cv.html" rel="alternate" type="text/html" title="PUNIT C.V" /><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><id>http://localhost:4000/2019/01/01/punit-cv</id><content type="html" xml:base="http://localhost:4000/2019/01/01/punit-cv.html"><![CDATA[<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">NAME</span> <span class="p">:</span><span class="o">-</span> <span class="no">PUNIT</span> <span class="no">SHARMA</span>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>]]></content><author><name>PUNIT SHARMA</name></author><category term="welcome" /><category term="introduction" /><summary type="html"><![CDATA[this article explains something and gives a brief introduction.]]></summary></entry><entry><title type="html">PUNIT C.V</title><link href="/2019/01/01/punit-cv.html" rel="alternate" type="text/html" title="PUNIT C.V" /><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><id>/2019/01/01/punit-cv</id><content type="html" xml:base="/2019/01/01/punit-cv.html"><![CDATA[<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">NAME</span> <span class="p">:</span><span class="o">-</span> <span class="no">PUNIT</span> <span class="no">SHARMA</span>
 <span class="no">D</span><span class="o">.</span><span class="no">O</span><span class="o">.</span><span class="no">B</span> <span class="p">:</span><span class="o">-</span> <span class="mo">02</span><span class="o">/</span><span class="mo">04</span><span class="o">/</span><span class="mi">2007</span>
 <span class="no">EMAIL</span> <span class="p">:</span><span class="o">-</span> <span class="n">punitsharma</span><span class="o">.</span><span class="mi">8022</span><span class="vi">@gmail</span><span class="p">.</span><span class="nf">com</span>
 <span class="no">PHONE</span> <span class="n">no</span><span class="o">.</span> <span class="mi">8130505020</span>
