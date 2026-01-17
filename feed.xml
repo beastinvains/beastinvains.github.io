@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-12-08T20:41:55+05:30</updated><id>/feed.xml</id><title type="html">PUNIT</title><subtitle>hi it&apos;s PUNIT Welcome to my personal space on the web! I created this site to share my achievements,  showcase my projects, and post updates about my journey through life, tech, and everything in between. Thanks for stopping by—feel free to explore!
-</subtitle><author><name>PUNIT SHARMA</name></author><entry><title type="html">🛡️ Malware Analysis Lab Setup Guide</title><link href="/analysis/2025/11/01/Malware-Analysis-Lab.html" rel="alternate" type="text/html" title="🛡️ Malware Analysis Lab Setup Guide" /><published>2025-11-01T00:00:00+05:30</published><updated>2025-11-01T00:00:00+05:30</updated><id>/analysis/2025/11/01/Malware-Analysis-Lab</id><content type="html" xml:base="/analysis/2025/11/01/Malware-Analysis-Lab.html"><![CDATA[<p><br /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-01-16T22:14:52+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">PUNIT</title><subtitle>hi it&apos;s PUNIT Welcome to my personal space on the web! I created this site to share my achievements,  showcase my projects, and post updates about my journey through life, tech, and everything in between. Thanks for stopping by—feel free to explore!
+</subtitle><author><name>PUNIT SHARMA</name></author><entry><title type="html">🛡️ Malware Analysis Lab Setup Guide</title><link href="http://localhost:4000/analysis/2025/11/01/Malware-Analysis-Lab.html" rel="alternate" type="text/html" title="🛡️ Malware Analysis Lab Setup Guide" /><published>2025-11-01T00:00:00+00:00</published><updated>2025-11-01T00:00:00+00:00</updated><id>http://localhost:4000/analysis/2025/11/01/Malware-Analysis-Lab</id><content type="html" xml:base="http://localhost:4000/analysis/2025/11/01/Malware-Analysis-Lab.html"><![CDATA[<p><br /></p>
 
 <p>A malware analysis lab allows you to safely study malware behaviour inside an isolated environment without risking your real machine or network.<br />
 This guide walks you through setting up a complete lab using:</p>
@@ -170,7 +170,7 @@ Dynamic analysis
 Network traffic monitoring
 
 Behavioural analysis
-</code></pre></div></div>]]></content><author><name>PUNIT SHARMA</name></author><category term="analysis" /><category term="malware_analysis" /><summary type="html"><![CDATA[A complete beginner-friendly guide to building a safe, isolated malware analysis lab using VMware, FLARE VM, and REMnux. Includes network setup, INetSim configuration, and fake internet simulation.]]></summary></entry><entry><title type="html">how to make persistence drive</title><link href="/2020/02/02/How-make-Linex-Persistent-drive.html" rel="alternate" type="text/html" title="how to make persistence drive" /><published>2020-02-02T00:00:00+05:30</published><updated>2020-02-02T00:00:00+05:30</updated><id>/2020/02/02/How-make-Linex-Persistent-drive</id><content type="html" xml:base="/2020/02/02/How-make-Linex-Persistent-drive.html"><![CDATA[<p>I’ll show you how to create a Kali Linux persistent drive, but you can use this method to make a persistent drive for any Linux version. I’ve personally tried it with Parrot OS and Ubuntu.</p>
+</code></pre></div></div>]]></content><author><name>PUNIT SHARMA</name></author><category term="analysis" /><category term="malware_analysis" /><summary type="html"><![CDATA[A complete beginner-friendly guide to building a safe, isolated malware analysis lab using VMware, FLARE VM, and REMnux. Includes network setup, INetSim configuration, and fake internet simulation.]]></summary></entry><entry><title type="html">how to make persistence drive</title><link href="http://localhost:4000/2020/02/02/How-make-Linex-Persistent-drive.html" rel="alternate" type="text/html" title="how to make persistence drive" /><published>2020-02-02T00:00:00+00:00</published><updated>2020-02-02T00:00:00+00:00</updated><id>http://localhost:4000/2020/02/02/How-make-Linex-Persistent-drive</id><content type="html" xml:base="http://localhost:4000/2020/02/02/How-make-Linex-Persistent-drive.html"><![CDATA[<p>I’ll show you how to create a Kali Linux persistent drive, but you can use this method to make a persistent drive for any Linux version. I’ve personally tried it with Parrot OS and Ubuntu.</p>
 
 <blockquote>
   <ul>
@@ -247,7 +247,328 @@ Behavioural analysis
 
 <p>-now boot drive on persistence mode</p>
 
-<p><img src="/assets/blog_image/presistence_drive/IMG_20241007_203646.jpg" alt="Another image" style="width: 500px; height: auto;" /></p>]]></content><author><name>PUNIT SHARMA</name></author><category term="miscellaneous" /><summary type="html"><![CDATA[Linux is my favorite operating system, but I often forget how to set up my Linux drive. This post is a simple guide to help anyone who wants to install Linux and keep their data safe during the process.]]></summary></entry><entry><title type="html">zusy_trojan</title><link href="/2020/02/01/zues_tro.html" rel="alternate" type="text/html" title="zusy_trojan" /><published>2020-02-01T00:00:00+05:30</published><updated>2020-02-01T00:00:00+05:30</updated><id>/2020/02/01/zues_tro</id><content type="html" xml:base="/2020/02/01/zues_tro.html"><![CDATA[]]></content><author><name>PUNIT SHARMA</name></author><category term="malware_analysis" /><summary type="html"><![CDATA[malware analis]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="/2019/04/16/welcome-to-jekyll2.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-04-16T00:00:00+05:30</published><updated>2019-04-16T00:00:00+05:30</updated><id>/2019/04/16/welcome-to-jekyll2</id><content type="html" xml:base="/2019/04/16/welcome-to-jekyll2.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<p><img src="/assets/blog_image/presistence_drive/IMG_20241007_203646.jpg" alt="Another image" style="width: 500px; height: auto;" /></p>]]></content><author><name>PUNIT SHARMA</name></author><category term="miscellaneous" /><summary type="html"><![CDATA[Linux is my favorite operating system, but I often forget how to set up my Linux drive. This post is a simple guide to help anyone who wants to install Linux and keep their data safe during the process.]]></summary></entry><entry><title type="html">ZUZE_GAME_OVER</title><link href="http://localhost:4000/2020/02/01/ZUZE_GAME_OVER.html" rel="alternate" type="text/html" title="ZUZE_GAME_OVER" /><published>2020-02-01T00:00:00+00:00</published><updated>2020-02-01T00:00:00+00:00</updated><id>http://localhost:4000/2020/02/01/ZUZE_GAME_OVER</id><content type="html" xml:base="http://localhost:4000/2020/02/01/ZUZE_GAME_OVER.html"><![CDATA[<h1 id="zuze-game-over-virus">ZUZE GAME OVER VIRUS</h1>
+<h2 id="static-and-dynamic-malware-analysis-report">Static and Dynamic Malware Analysis Report</h2>
+
+<hr />
+
+<h2 id="static-analysis">STATIC ANALYSIS</h2>
+
+<h3 id="fingerprinting">Fingerprinting</h3>
+
+<table border="1" cellpadding="6">
+  <tr>
+    <th>File Name</th>
+    <th>Size (bits)</th>
+    <th>Meaning</th>
+    <th>Architecture</th>
+  </tr>
+  <tr>
+    <td>epig.exe</td>
+    <td>319968</td>
+    <td>Packed sample</td>
+    <td>32-bit</td>
+  </tr>
+  <tr>
+    <td>epig_unpacked.exe</td>
+    <td>261120</td>
+    <td>Unpacked version</td>
+    <td>32-bit</td>
+  </tr>
+</table>
+
+<p>We will be diving into the <strong>unpacked sample</strong> for analysis.</p>
+
+<hr />
+
+<h3 id="hash-analysis">Hash Analysis</h3>
+
+<ul>
+  <li>
+    <p><strong>SHA-256</strong><br />
+<code class="language-plaintext highlighter-rouge">09E9FB8BEB798F2C17A311D59C0A44D9E815D6CAD8EA4FEADD77A66D4D3706B5</code></p>
+  </li>
+  <li>
+    <p><strong>MD5</strong><br />
+<code class="language-plaintext highlighter-rouge">36ADE9194C6F05CCEE041CEF0A5C7DA7</code></p>
+  </li>
+  <li>
+    <p><strong>HEX Header</strong><br />
+<code class="language-plaintext highlighter-rouge">4D 5A 90 00 03 00 00 00 04 00 00 00 FF FF 00 00 B8 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00</code></p>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="pestudio-observation">PEStudio Observation</h3>
+
+<p>The file is identified as a <strong>Windows executable</strong> because it starts with the <code class="language-plaintext highlighter-rouge">MZ</code> header.</p>
+
+<hr />
+
+<h3 id="imported-libraries">Imported Libraries</h3>
+
+<ul>
+  <li><b>Secur32.dll</b> – Authentication and security packages</li>
+  <li><b>WS2_32.dll</b> – TCP/IP network communication</li>
+  <li><b>CRYPT32.dll</b> – Cryptographic operations</li>
+  <li><b>WININET.dll</b> – HTTP/FTP communication</li>
+  <li><b>NETAPI32.dll</b> – Network and user management</li>
+  <li><b>IPHLPAPI.dll</b> – Network configuration details</li>
+  <li><b>ADVAPI32.dll</b> – Windows Registry manipulation</li>
+</ul>
+<hr />
+
+<h2 id="functional-breakdown-of-the-malware">Functional Breakdown of the Malware</h2>
+
+<p>The malware likely performs the following actions:</p>
+<ul>
+  <li>
+    <b>Command &amp; Control (C2):</b>
+    Uses socket and HTTP-based communication to contact attacker servers.
+  </li>
+  <li>
+    <b>Data Exfiltration &amp; Encryption:</b>
+    Encrypts stolen data using Windows cryptographic APIs.
+  </li>
+  <li>
+    <b>System Profiling:</b>
+    Collects network, system, and user information.
+  </li>
+  <li>
+    <b>Persistence &amp; Stealth:</b>
+    Modifies registry keys to survive system reboots.
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="imports">IMPORTS</h2>
+
+<h3 id="process-injection">Process Injection</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">VirtualAllocEx</code></li>
+  <li><code class="language-plaintext highlighter-rouge">WriteProcessMemory</code></li>
+  <li><code class="language-plaintext highlighter-rouge">CreateRemoteThread</code></li>
+  <li><code class="language-plaintext highlighter-rouge">SetThreadContext</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GetThreadContext</code></li>
+</ul>
+
+<h3 id="stealth--hidden-desktop">Stealth &amp; Hidden Desktop</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">CreateDesktopW</code></li>
+  <li><code class="language-plaintext highlighter-rouge">SwitchDesktop</code></li>
+  <li><code class="language-plaintext highlighter-rouge">SetThreadDesktop</code></li>
+  <li><code class="language-plaintext highlighter-rouge">OpenInputDesktop</code></li>
+</ul>
+
+<h3 id="privilege-escalation">Privilege Escalation</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">AdjustTokenPrivileges</code></li>
+  <li><code class="language-plaintext highlighter-rouge">OpenProcessToken</code></li>
+  <li><code class="language-plaintext highlighter-rouge">LookupPrivilegeValueW</code></li>
+  <li><code class="language-plaintext highlighter-rouge">CreateProcessAsUserW</code></li>
+</ul>
+
+<h3 id="persistence">Persistence</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">RegSetValueExW</code></li>
+  <li><code class="language-plaintext highlighter-rouge">RegCreateKeyExW</code></li>
+  <li><code class="language-plaintext highlighter-rouge">SetFileAttributesW</code></li>
+</ul>
+
+<h3 id="information-theft">Information Theft</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">GetKeyboardState</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GetClipboardData</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GetUserNameExW</code></li>
+</ul>
+
+<h3 id="network-communication">Network Communication</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">send</code></li>
+  <li><code class="language-plaintext highlighter-rouge">recv</code></li>
+  <li><code class="language-plaintext highlighter-rouge">WSAEventSelect</code></li>
+  <li><code class="language-plaintext highlighter-rouge">getaddrinfo</code></li>
+</ul>
+
+<h3 id="encryption-c2">Encryption (C2)</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">EncryptMessage</code></li>
+  <li><code class="language-plaintext highlighter-rouge">DecryptMessage</code></li>
+  <li><code class="language-plaintext highlighter-rouge">CryptImportKey</code></li>
+  <li><code class="language-plaintext highlighter-rouge">CryptVerifySignatureW</code></li>
+</ul>
+
+<h3 id="anti-analysis">Anti-Analysis</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">OutputDebugStringA</code></li>
+  <li><code class="language-plaintext highlighter-rouge">CreateToolhelp32Snapshot</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Process32NextW</code></li>
+</ul>
+
+<hr />
+
+<h2 id="strings">STRINGS</h2>
+
+<h3 id="encryption">Encryption</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">CryptAcquireContextW</code></li>
+  <li><code class="language-plaintext highlighter-rouge">CryptCreateHash</code></li>
+  <li><code class="language-plaintext highlighter-rouge">CryptHashData</code></li>
+  <li><code class="language-plaintext highlighter-rouge">CryptUnprotectData</code></li>
+  <li><code class="language-plaintext highlighter-rouge">PFXImportCertStore</code></li>
+  <li><code class="language-plaintext highlighter-rouge">certs\%s\%s_%02u_%02u_%04u.pfx</code></li>
+</ul>
+
+<h3 id="data-handling">Data Handling</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">CreateFileW</code></li>
+  <li><code class="language-plaintext highlighter-rouge">WriteFile</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ReadFile</code></li>
+  <li><code class="language-plaintext highlighter-rouge">DeleteFileW</code></li>
+  <li><code class="language-plaintext highlighter-rouge">MoveFileExW</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GetTempPathW</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GetTempFileNameW</code></li>
+  <li><code class="language-plaintext highlighter-rouge">%s.cab</code></li>
+  <li><code class="language-plaintext highlighter-rouge">flashplayer.cab</code></li>
+</ul>
+
+<h3 id="environment-awareness">Environment Awareness</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">IsWow64Process</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GetNativeSystemInfo</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GetVersionExW</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GetSystemMetrics</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GetDiskFreeSpaceExW</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GetAdaptersAddresses</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GetDriveTypeW</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GlobalMemoryStatusEx</code></li>
+</ul>
+
+<h3 id="surveillance">Surveillance</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">screenshots\%s\%04x_%08x.jpg</code></li>
+  <li><code class="language-plaintext highlighter-rouge">image/jpeg</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GDI32.dll</code></li>
+  <li><code class="language-plaintext highlighter-rouge">PrintWindow</code></li>
+  <li><code class="language-plaintext highlighter-rouge">BitBlt</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GetDC</code></li>
+</ul>
+
+<hr />
+
+<h2 id="note-static-analysis">NOTE (Static Analysis)</h2>
+
+<p>Static analysis indicates that the Zeus Game Over sample is a <strong>32-bit Windows PE executable</strong> with extensive capabilities for:</p>
+
+<ul>
+  <li>Process injection</li>
+  <li>Credential theft</li>
+  <li>Encrypted C2 communication</li>
+  <li>Registry-based persistence</li>
+  <li>User surveillance</li>
+</ul>
+
+<p>The unpacked version exposes clear indicators of malicious intent, warranting further <strong>dynamic and behavioral analysis</strong>.</p>
+
+<hr />
+
+<h2 id="dynamic-analysis-unpacked-sample">DYNAMIC ANALYSIS (Unpacked Sample)</h2>
+
+<h3 id="registry--persistence-strings">Registry &amp; Persistence Strings</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">SOFTWARE\Microsoft\Windows NT\CurrentVersion</code></li>
+  <li><code class="language-plaintext highlighter-rouge">SOFTWARE\Microsoft\Internet Explorer</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ProfileList\%s</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ProfileImagePath</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Start Page</code></li>
+  <li><code class="language-plaintext highlighter-rouge">InstallDate</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Run</code></li>
+</ul>
+
+<h3 id="c2-communication-strings">C2 Communication Strings</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">HTTP/1.1</code></li>
+  <li><code class="language-plaintext highlighter-rouge">POST /write HTTP/1.1</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GET /test HTTP/1.1</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Host: default</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Content-Type: application/x-www-form-urlencoded</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Authorization</code></li>
+  <li><code class="language-plaintext highlighter-rouge">X-Real-IP</code></li>
+</ul>
+
+<h3 id="data-theft-indicators">Data Theft Indicators</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">username="%s", password="%s"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Account_Name</code></li>
+  <li><code class="language-plaintext highlighter-rouge">SMTP_Email_Address</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Google Talk</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Windows Mail</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Mozilla\Firefox</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Internet Explorer</code></li>
+</ul>
+
+<h3 id="process-injection-apis">Process Injection APIs</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">VirtualAllocEx</code></li>
+  <li><code class="language-plaintext highlighter-rouge">WriteProcessMemory</code></li>
+  <li><code class="language-plaintext highlighter-rouge">CreateRemoteThread</code></li>
+  <li><code class="language-plaintext highlighter-rouge">NtCreateThread</code></li>
+  <li><code class="language-plaintext highlighter-rouge">NtCreateUserProcess</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ReadProcessMemory</code></li>
+  <li><code class="language-plaintext highlighter-rouge">VirtualProtectEx</code></li>
+</ul>
+
+<hr />
+
+<h2 id="execution-overview">Execution Overview</h2>
+
+<p>The unpacked sample (<code class="language-plaintext highlighter-rouge">epig_unpacked.exe</code>) was executed in an isolated <strong>FLARE-VM</strong> environment with <strong>INetSim</strong>.</p>
+
+<h3 id="observations">Observations</h3>
+<ul>
+  <li>No child processes spawned</li>
+  <li>No registry persistence detected</li>
+  <li>No files created or modified</li>
+  <li>No network traffic observed</li>
+</ul>
+
+<hr />
+
+<h2 id="analysis-conclusion-unpacked-sample">Analysis Conclusion (Unpacked Sample)</h2>
+
+<p>The unpacked variant showed <strong>minimal runtime behavior</strong> and lacked loader or installation logic.<br />
+It is likely intended for <strong>static analysis or reverse engineering only</strong>.</p>
+
+<hr />
+
+<h2 id="analyst-note">Analyst Note</h2>
+
+<p>The absence of malicious behavior is a valid finding.<br />
+Zeus Game Over commonly relies on <strong>loader-based execution</strong>, which is removed in unpacked samples.</p>
+
+<hr />
+
+<h2 id="dynamic-analysis-summary-packed-sample">Dynamic Analysis Summary (Packed Sample)</h2>
+
+<ul>
+  <li>Sample executed briefly and terminated</li>
+  <li>Only standard DLL loading observed</li>
+  <li>No persistence, injection, or network activity</li>
+  <li>Likely incompatible with modern Windows environments</li>
+</ul>
+
+<hr />
+
+<h2 id="final-conclusion">Final Conclusion</h2>
+
+<p>Although full runtime behavior was not observed, <strong>static and partial dynamic analysis confirm the sample as Zeus Game Over malware</strong>.<br />
+Execution failure is attributed to <strong>legacy design and environment incompatibility</strong>, not analysis error.</p>
+
+<hr />
+
+<p><em>Source: Original PDF Analysis Report</em> :<a href="https://www.linkedin.com/posts/punit-sharma-68b49425a_ana-ugcPost-7417936074376925184-gYhL?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAD_Jh8sBXXEttA3W7jcP_TTfG7jIAgtqxd4">contentReference</a></p>]]></content><author><name>PUNIT SHARMA</name></author><category term="malware_analysis" /><summary type="html"><![CDATA[This blog presents a detailed static and dynamic malware analysis of the *Zeus Game Over (ZUZE)* sample. The analysis focuses on PE structure, imported APIs, encryption mechanisms, persistence indicators, and runtime behavior observed in an isolated FLARE-VM environment.]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/2019/04/16/welcome-to-jekyll2.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-04-16T00:00:00+00:00</published><updated>2019-04-16T00:00:00+00:00</updated><id>http://localhost:4000/2019/04/16/welcome-to-jekyll2</id><content type="html" xml:base="http://localhost:4000/2019/04/16/welcome-to-jekyll2.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <p>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
 
@@ -349,7 +670,7 @@ more quote text to come</p>
 <p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/jekyll?src=hash&amp;ref_src=twsrc%5Etfw">#jekyll</a> <a href="https://twitter.com/hashtag/dash?src=hash&amp;ref_src=twsrc%5Etfw">#dash</a> now officially supports both, dark and light theming. Enjoy!<a href="https://t.co/4evp9pX2Ws">https://t.co/4evp9pX2Ws</a> <a href="https://t.co/vOQCZjGKic">pic.twitter.com/vOQCZjGKic</a></p>&mdash; 〽️ɪɢᴜᴇʟ (@bitbrain_) <a href="https://twitter.com/bitbrain_/status/1166440978124877827?ref_src=twsrc%5Etfw">August 27, 2019</a></blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>]]></content><author><name>PUNIT SHARMA</name></author><category term="welcome" /><category term="introduction" /><summary type="html"><![CDATA[this article explains something and gives a brief introduction.]]></summary></entry><entry><title type="html">PUNIT C.V</title><link href="/2019/01/01/punit-cv.html" rel="alternate" type="text/html" title="PUNIT C.V" /><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><id>/2019/01/01/punit-cv</id><content type="html" xml:base="/2019/01/01/punit-cv.html"><![CDATA[<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">NAME</span> <span class="p">:</span><span class="o">-</span> <span class="no">PUNIT</span> <span class="no">SHARMA</span>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>]]></content><author><name>PUNIT SHARMA</name></author><category term="welcome" /><category term="introduction" /><summary type="html"><![CDATA[this article explains something and gives a brief introduction.]]></summary></entry><entry><title type="html">PUNIT C.V</title><link href="http://localhost:4000/2019/01/01/punit-cv.html" rel="alternate" type="text/html" title="PUNIT C.V" /><published>2019-01-01T00:00:00+00:00</published><updated>2019-01-01T00:00:00+00:00</updated><id>http://localhost:4000/2019/01/01/punit-cv</id><content type="html" xml:base="http://localhost:4000/2019/01/01/punit-cv.html"><![CDATA[<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">NAME</span> <span class="p">:</span><span class="o">-</span> <span class="no">PUNIT</span> <span class="no">SHARMA</span>
 <span class="no">D</span><span class="o">.</span><span class="no">O</span><span class="o">.</span><span class="no">B</span> <span class="p">:</span><span class="o">-</span> <span class="mo">02</span><span class="o">/</span><span class="mo">04</span><span class="o">/</span><span class="mi">2007</span>
 <span class="no">EMAIL</span> <span class="p">:</span><span class="o">-</span> <span class="n">punitsharma</span><span class="o">.</span><span class="mi">8022</span><span class="vi">@gmail</span><span class="p">.</span><span class="nf">com</span>
 <span class="no">PHONE</span> <span class="n">no</span><span class="o">.</span> <span class="mi">8130505020</span>
