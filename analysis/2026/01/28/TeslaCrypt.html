@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html class="direction--ltr"lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Ransomware TeslaCrypt | PUNIT</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Ransomware TeslaCrypt" />
+<meta name="author" content="PUNIT SHARMA" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="tatic and dynamic analysis of TeslaCrypt ransomware, including API behavior, string evidence, network communication, and energy consumption impact." />
+<meta property="og:description" content="tatic and dynamic analysis of TeslaCrypt ransomware, including API behavior, string evidence, network communication, and energy consumption impact." />
+<meta property="og:site_name" content="PUNIT" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Ransomware TeslaCrypt" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"PUNIT SHARMA"},"dateModified":"2026-01-28T00:00:00+00:00","datePublished":"2026-01-28T00:00:00+00:00","description":"tatic and dynamic analysis of TeslaCrypt ransomware, including API behavior, string evidence, network communication, and energy consumption impact.","headline":"Ransomware TeslaCrypt","mainEntityOfPage":{"@type":"WebPage","@id":"/analysis/2026/01/28/TeslaCrypt.html"},"url":"/analysis/2026/01/28/TeslaCrypt.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+  <link rel="stylesheet" href="/assets/css/magnific-popup.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="PUNIT" /><script src="https://code.jquery.com/jquery-3.2.0.min.js"></script> 
+  <script src="/assets/js/jquery.magnific-popup.js"></script>
+</head>
+<body><div class="site-header">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">PUNIT<b class="command_prompt"></b><b class="blinking_cursor">_</b></a>
+    <span class="social_links">
+        
+        
+        <a class="color-cyan-hover" href="https://x.com/punit_247"><i class="fab fa-twitter-square"></i></a>
+        
+        
+        
+        <a class="color-red-hover" href="https://punit247.itch.io/"><i class="fab fa-itch-io"></i></a>
+        
+        
+        
+        <a class="color-purple-hover" href="https://github.com/beastinvains"><i class="fab fa-github-square"></i></a>
+        
+        
+        
+        <a class="color-pink-hover" href="https://www.instagram.com/punit_bytes/"><i class="fab fa-instagram"></i></a>
+        
+        
+        
+        <a class="color-blue-hover" href="https://www.linkedin.com/in/punit-sharma-68b49425a/"><i class="fab fa-linkedin-square"></i></a>
+        
+        
+        
+        <a class="color-red-hover" href="https://www.youtube.com/@DarkFablesoffical"><i class="fab fa-youtube"></i></a>
+        
+        
+        
+        <a class="color-pink-hover" href="https://www.pinterest.com/punitsharma8022/"><i class="fab fa-pinterest"></i></a>
+        
+        
+        
+        <a class="color-orange-hover" href="https://www.reddit.com/user/Ill-Journalist6540/"><i class="fab fa-reddit"></i></a>
+        
+        
+        
+        <a class="color-yellow-hover" href="https://www.snapchat.com/punit_shar8022"><i class="fab fa-snapchat"></i></a>
+        
+        
+    </span>
+  </div>
+</div>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+  <div class="author-box">
+
+
+<img src="/assets/avatar.png" class="author-avatar" alt="Avatar" />
+<div class="description">hi it's PUNIT Welcome to my personal space on the web! I created this site to share my achievements,  showcase my projects, and post updates about my journey through life, tech, and everything in between. Thanks for stopping by—feel free to explore!
+</div>
+
+</div>
+
+
+<div class="post">
+  <h1 class="post-title">Ransomware TeslaCrypt</h1>
+  
+  <div class="post-tags">
+      
+      <a class="tag" href="/tag/malware_analysis/">malware_analysis</a>
+      
+  </div>
+  
+  <div class="post-date">
+    Published on 28 Jan 2026
+    
+  </div>
+  
+  <noscript>
+    <div class="post-description">tatic and dynamic analysis of TeslaCrypt ransomware, including API behavior, string evidence, network communication, and energy consumption impact.</div>
+  </noscript>
+  <div id="animated-post-description" class="post-description" style="display: none;"></div>
+  
+  <script>
+function filterStrings() {
+    let input = document.getElementById('searchBar').value.toLowerCase();
+    let cards = document.getElementsByClassName('category-card');
+    
+    for (let i = 0; i < cards.length; i++) {
+        let items = cards[i].getElementsByTagName('li');
+        let cardHasMatch = false;
+        
+        for (let j = 0; j < items.length; j++) {
+            if (items[j].innerHTML.toLowerCase().indexOf(input) > -1) {
+                items[j].style.display = "";
+                cardHasMatch = true;
+            } else {
+                items[j].style.display = "none";
+            }
+        }
+        // Hide card if no items match
+        cards[i].style.display = cardHasMatch ? "" : "none";
+    }
+}
+</script>
+
+<style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            margin: 20px 0;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+            text-align: left;
+            padding: 12px;
+        }
+        td {
+            border: 1px solid #ddd;
+            padding: 1px;
+            vertical-align: top;
+        }
+        tr:hover {
+            background-color:rgb(0, 0, 0);
+        }
+        .category-cell {
+            font-weight: bold;
+            color: #c0392b;
+            width: 20%;
+        }
+        dl { background:rgb(0, 0, 0); padding: 20px; border-left: 5px solid #2980b9; border-radius: 4px; }
+        dt { font-weight: bold; font-size: 1.2em; color: #2c3e50; margin-top: 15px; }
+        dt span { font-size: 0.8em; color: #7f8c8d; font-weight: normal; }
+        dd { margin: 5px 0 15px 20px; font-style: italic; }
+        .purpose { display: block; font-style: normal; margin-top: 5px; color: #444; }
+        .purpose::before { content: "🎯 Purpose: "; font-weight: bold; color: #e67e22; }
+
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg); color: var(--text); padding: 20px; }
+        .header { border-bottom: 2px solid var(--accent); margin-bottom: 20px; padding-bottom: 10px; }
+        
+        /* Search Bar */
+        #searchBar {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: none;
+            background: var(--card-bg);
+            color: white;
+            font-size: 16px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        /* Grid Layout */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
+        
+        .category-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 15px;
+            border: 1px solid #334155;
+        }
+        .category-card h3 { 
+            margin-top: 0; 
+            color: var(--accent); 
+            font-size: 1.1em;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 8px;
+        }
+
+        .string-list { list-style: none; padding: 0; margin: 0; }
+        .string-list li {
+            padding: 6px 8px;
+            margin: 4px 0;
+            background: #0f172a;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.85em;
+            word-break: break-all;
+            transition: background 0.2s;
+        }
+        .string-list li:hover { background: #334155; }
+        
+        .tag-ransom { color: var(--danger); font-weight: bold; }
+        .tag-api { color: #fbbf24; }
+    </style>
+
+<h1 id="ransomware-teslacrypt--static--dynamic-analysis">Ransomware TeslaCrypt – Static &amp; Dynamic Analysis</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>This blog presents a detailed <strong>static and dynamic analysis of the TeslaCrypt ransomware</strong>.<br />
+The objective is to understand its internal structure, behavior, network communication, and <strong>environmental impact due to energy consumption</strong>.</p>
+
+<hr />
+
+<h2 id="static-analysis">Static Analysis</h2>
+
+<h3 id="fingerprinting">Fingerprinting</h3>
+<table border="1" cellpadding="6">
+  <tr>
+    <th>File Name</th>
+    <th>Size (bits)</th>
+    <th>Meaning</th>
+    <th>Architecture</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>290,816</td>
+    <td>Packed sample</td>
+    <td>32-bit</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>263,680</td>
+    <td>Unpacked version</td>
+    <td>32-bit</td>
+  </tr>
+</table>
+
+<p>We focus on the <strong>unpacked sample</strong> for analysis.</p>
+
+<hr />
+
+<h3 id="hash-analysis">Hash Analysis</h3>
+
+<ul>
+  <li>
+    <p><strong>SHA-256</strong><br />
+<code class="language-plaintext highlighter-rouge">3372c1edab46837f1e973164fa2d726c5c5e17bcb888828ccd7c4dfcc234a370</code></p>
+  </li>
+  <li>
+    <p><strong>MD5</strong><br />
+<code class="language-plaintext highlighter-rouge">209a288c68207d57e0ce6e60ebf60729</code></p>
+  </li>
+</ul>
+
+<p>The executable starts with <strong>MZ</strong>, confirming it is a <strong>Windows PE file</strong>.<br />
+Compile timestamps align with known TeslaCrypt campaigns (timestamps may be falsified).</p>
+
+<h4 id="hash--pestudio-output">Hash &amp; PEStudio Output</h4>
+
+<p><img src="/assets/blog_image/report2/2.JPG" style="width: 800px; height: auto;" /></p>
+
+<hr />
+
+<p><img src="/assets/blog_image/report2/1.JPG" style="width: 800px; height: auto;" /></p>
+
+<hr />
+
+<h2 id="imported-apis-malicious-indicators">Imported APIs (Malicious Indicators)</h2>
+<table>
+<tr>
+    <th>Category</th>
+    <th>API Function</th>
+    <th>Potential Malicious Purpose</th>
+</tr>
+
+
+<tr>
+    <td class="category-cell" rowspan="3">Evasion &amp; Stealth</td>
+    <td>IsDebuggerPresent</td>
+    <td>Used to change behavior or exit to avoid analysis.</td>
+</tr>
+<tr>
+    <td>Sleep</td>
+    <td>Delays execution to "time out" automated sandboxes.</td>
+</tr>
+<tr>
+    <td>VirtualAlloc</td>
+    <td>Process Injection or unpacking hidden code.</td>
+</tr>
+<tr>
+    <td class="category-cell" rowspan="2">Data Theft (Stealer)</td>
+    <td>OpenClipboard / GetClipboardData</td>
+    <td>Clipboard Hijacking</td>
+</tr>
+<tr>
+    <td>GetDIBits / CreateCompatibleBitmap</td>
+    <td>Screen Capturing.</td>
+</tr>
+<tr>
+    <td class="category-cell" rowspan="3">Information Gathering</td>
+    <td>EnumProcesses</td>
+       <td>Lists all running programs to identify security software (Antivirus).</td>
+</tr>
+<tr>
+    <td>GetLogicalDriveStringsW</td>
+    <td>Identifies connected drives (USB, Network shares).</td>
+</tr>
+<tr>
+    <td>GetTokenInformation</td>
+    <td>Checks user privileges.</td>
+</tr>
+<tr>
+    <td class="category-cell" rowspan="3">Persistence &amp; Execution</td>
+    <td>RegSetValueExW</td>
+    <td>Writes to the Windows Registry to ensure the malware starts automatically on every reboot.</td>
+</tr>
+<tr>
+    <td>ShellExecuteW / CreateProcessW</td>
+    <td>Launches secondary payloads, command scripts, or hidden system tools.</td>
+</tr>
+<tr>
+    <td>CopyFileW</td>
+    <td>Moves the malware binary to a "safe" hidden directory (like System32 or AppData).</td>
+</tr>
+<tr>
+    <td class="category-cell" rowspan="3">Network &amp; Exfiltration</td>
+    <td>InternetConnectA</td>
+    <td>Establishes a connection to a remote Command &amp; Control (C2) server.</td>
+</tr>
+<tr>
+    <td>HttpSendRequestA</td>
+    <td>Exfiltration.</td>
+</tr>
+<tr>
+    <td>InternetSetCookieW</td>
+    <td>Used to steal or manipulate web session cookies to hijack online accounts.</td>
+</tr>
+<tr>
+    <td class="category-cell">Anti-Forensics</td>
+       <td>DeleteFileW</td>
+    <td>Used to delete the original installer or temporary "stolen data" files after they are uploaded cover tracks.</td>
+</tr>
+</table>
+
+<h4 id="imports-table-screenshot">Imports Table Screenshot</h4>
+
+<p><img src="/assets/blog_image/report2/3.JPG" style="width: 800px; height: auto;" /></p>
+
+<hr />
+
+<h2 id="library-analysis">Library Analysis</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>DLL</th>
+      <th>Risk Level</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>WININET.dll</td>
+      <td>Critical</td>
+      <td>C2 communication</td>
+    </tr>
+    <tr>
+      <td>ADVAPI32.dll</td>
+      <td>High</td>
+      <td>Privilege &amp; registry</td>
+    </tr>
+    <tr>
+      <td>PSAPI.dll</td>
+      <td>High</td>
+      <td>Process enumeration</td>
+    </tr>
+    <tr>
+      <td>KERNEL32.dll</td>
+      <td>Medium</td>
+      <td>Core execution</td>
+    </tr>
+    <tr>
+      <td>USER32.dll</td>
+      <td>Medium</td>
+      <td>User activity</td>
+    </tr>
+    <tr>
+      <td>GDI32.dll</td>
+      <td>Medium</td>
+      <td>Screen capture</td>
+    </tr>
+    <tr>
+      <td>SHELL32.dll</td>
+      <td>Medium</td>
+      <td>Program execution</td>
+    </tr>
+  </tbody>
+</table>
+
+<dl>
+    <dt>1. Network &amp; Data Theft <span>(WININET.dll &amp; ole32.dll)</span></dt>
+    <dd>
+        These libraries allow the malware to act like a web browser.
+        <span class="purpose">It uses these to send stolen data (logins, cookies, files) to a remote server. The ole32.dll library helps it interact with browser objects or other COM-based applications (like Outlook or Excel) to extract data.</span>
+    </dd>
+
+<dt>2. System Reconnaissance <span>(PSAPI.DLL &amp; KERNEL32.dll)</span></dt>
+    <dd>
+        These are used to "scout" the infected machine.
+        <span class="purpose">PSAPI (Process Status API) is specifically used to see which programs are currently running. Malware uses this to look for tools like Wireshark, Process Hacker, or Windows Defender to avoid being caught.</span>
+    </dd>
+
+<dt>3. User Spying <span>(USER32.dll &amp; GDI32.dll)</span></dt>
+    <dd>
+        These handle the visual and interactive parts of Windows.
+        <span class="purpose">Used to "hook" user actions. USER32 monitors typing/clicking, while GDI32 and MSIMG32 "paint" a copy of your screen into a file to be stolen.</span>
+    </dd>
+
+<dt>4. Privilege Escalation <span>(ADVAPI32.dll)</span></dt>
+    <dd>
+        This library manages security and registry access.
+        <span class="purpose">The malware checks for "System" or "Admin" rights. If missing, it may trigger UAC prompts or exploit vulnerabilities to gain higher permissions.</span>
+    </dd>
+</dl>
+
+<hr />
+
+<h2 id="string-analysis">String Analysis</h2>
+<div class="header">
+    <h1>Malware Analysis: <span class="tag-ransom">CryptoLocker v3</span></h1>
+    <p>String Classification &amp; Evidence Overview</p>
+</div>
+
+<p><input type="text" id="searchBar" onkeyup="filterStrings()" placeholder="Search for strings (e.g. '.onion', 'Crypt', 'exe')..." /></p>
+
+<div class="grid" id="stringGrid">
+<div class="category-card">
+    <h3>📄 Binary Artifacts (PE Header)</h3>
+    <ul class="string-list">
+        <li>This program cannot be run in DOS mode</li>
+        <li>RichkM</li>
+        <li>.text (Code Section)</li>
+        <li>.rdata (Read-only Data)</li>
+        <li>.data (Initialized Data)</li>
+        <li>.rsrc (Resources)</li>
+    </ul>
+</div>
+
+<!-- Ransomware Specifics -->
+<div class="category-card">
+    <h3>💰 Ransomware Evidence</h3>
+    <ul class="string-list">
+        <li class="tag-ransom">CryptoLocker-v3</li>
+        <li>HELP_TO_DECRYPT_YOUR_FILES.txt</li>
+        <li>HELP_TO_DECRYPT_YOUR_FILES.bmp</li>
+        <li>CryptoLocker.lnk</li>
+        <li>key.dat | log.html | help.html</li>
+        <li>vssadmin delete shadows /all</li>
+    </ul>
+</div>
+
+<!-- Network & C2 -->
+<div class="category-card">
+    <h3>🌐 Network &amp; Exfiltration</h3>
+    <ul class="string-list">
+        <li>34r6hq26q2h4jkzj.onion</li>
+        <li>tor2web.fi | tor2web.org</li>
+        <li>50.7.138.132 (C2 IP)</li>
+        <li>Subject=Payment&amp;recovery_key=%s...</li>
+        <li>Subject=Ping | Subject=Crypted</li>
+        <li>WININET.dll</li>
+    </ul>
+</div>
+
+<!-- Cryptography -->
+<div class="category-card">
+    <h3>🔐 Cryptographic Operations</h3>
+    <ul class="string-list">
+        <li>RSA-2048 | SHA-256 | RIPE-MD160</li>
+        <li>CryptAcquireContextW</li>
+        <li>CryptGenRandom | CryptEncrypt</li>
+        <li>SECG curve over a 256 bit prime field</li>
+        <li>CAutoBN_CTX : BN_CTX_new()</li>
+        <li>EncodeBase58</li>
+    </ul>
+</div>
+
+<!-- Target File Extensions -->
+<div class="category-card">
+    <h3>🎯 Encryption Targets</h3>
+    <ul class="string-list">
+        <li>Documents: .docx, .xlsx, .pptx, .accdb</li>
+        <li>Media: .jpeg, .asset, .unity3d</li>
+        <li>Databases: .db, .mdbackup</li>
+        <li>Games: .mcgame, .wotreplay, .rgss3a</li>
+    </ul>
+</div>
+
+<!-- GUI / Interaction -->
+<div class="category-card">
+    <h3>🖥️ GUI / User Interaction</h3>
+    <ul class="string-list">
+        <li>Your personal files are encrypted!</li>
+        <li>Enter Decrypt Key</li>
+        <li>Check Payment</li>
+        <li>Click to copy Bitcoin address</li>
+        <li>mshta.exe (HTML Application Host)</li>
+    </ul>
+</div>
+
+<!-- Persistence & Anti-Analysis -->
+<div class="category-card">
+    <h3>🛡️ Persistence &amp; Evasion</h3>
+    <ul class="string-list">
+        <li>Software\Microsoft\Windows\CurrentVersion\Run</li>
+        <li>IsDebuggerPresent</li>
+        <li>CreateMutexW</li>
+        <li>EnumProcesses | CreateToolhelp32Snapshot</li>
+        <li>Process32First / Next</li>
+    </ul>
+</div>
+
+</div>
+
+<p>Static strings confirm <strong>TeslaCrypt / CryptoLocker family ransomware</strong>. <br />
+Static string analysis reveals that the sample is a fully functional ransomware belonging to the
+TeslaCrypt/CryptoLocker family. The malware implements strong cryptographic routines, including
+RSA-2048 and SHA-256, to encrypt a wide range of user files across multiple file formats. It
+enumerates drives and processes, deletes Volume Shadow Copies to prevent recovery, and
+establishes persistence via registry Run keys. The presence of Tor and Tor2Web URLs, Bitcoinrelated encoding, and extensive ransom instructions indicates a complete payment and decryption
+workflow. These strings strongly confirm ransomware behavior without requiring execution.</p>
+
+<hr />
+
+<h2 id="static-analysis-conclusion">Static Analysis Conclusion</h2>
+
+<p>Static analysis confirms this sample as a <strong>fully functional TeslaCrypt ransomware</strong>.<br />
+It includes encryption, persistence, network communication, and victim interaction mechanisms.<br />
+Dynamic analysis is required to observe <strong>runtime behavior and system impact</strong>.</p>
+
+<hr />
+
+<h3 id="key-evidence">Key Evidence</h3>
+
+<ul>
+  <li>RSA-2048 &amp; SHA-256 encryption</li>
+  <li>Tor &amp; Tor2Web URLs</li>
+  <li>Bitcoin payment workflow</li>
+  <li>File extension targeting</li>
+  <li>Shadow copy deletion</li>
+  <li>GUI ransom messages</li>
+</ul>
+
+<h2 id="dynamic-analysis">Dynamic Analysis</h2>
+
+<h4 id="ransom-note--gui">Ransom Note &amp; GUI</h4>
+
+<p><img src="/assets/blog_image/report2/s2.JPG" style="width: 800px; height: auto;" />
+<br />
+<img src="/assets/blog_image/report2/s3.JPG" style="width: 800px; height: auto;" /></p>
+
+<h3 id="process-behavior">Process Behavior</h3>
+
+<ul>
+  <li>Opens files with write permission</li>
+  <li>Overwrites original data</li>
+  <li>Deletes original files</li>
+  <li>Runs continuously</li>
+</ul>
+
+<h4 id="process-monitoring">Process Monitoring</h4>
+
+<p><img src="/assets/blog_image/report2/s1.JPG" style="width: 800px; height: auto;" /></p>
+
+<hr />
+
+<h3 id="file-system-modifications">File System Modifications</h3>
+
+<ul>
+  <li>Creation of ransom notes</li>
+  <li>Encryption of files (<code class="language-plaintext highlighter-rouge">.jpg</code>, <code class="language-plaintext highlighter-rouge">.txt</code>, etc.)</li>
+  <li>Renaming encrypted extensions</li>
+  <li>Startup persistence enabled</li>
+</ul>
+
+<p><img src="/assets/blog_image/report2/s5.JPG" style="width: 800px; height: auto;" /></p>
+
+<hr />
+
+<h2 id="network-behavior-analysis">Network Behavior Analysis</h2>
+
+<p>Network analysis was performed using <strong>INetSim</strong>.</p>
+
+<h3 id="observations">Observations</h3>
+
+<ul>
+  <li>DNS queries to Tor2Web gateways</li>
+  <li>Onion service communication attempts</li>
+  <li>Bitcoin-related requests</li>
+  <li>Payment verification traffic</li>
+</ul>
+
+<h4 id="network-logs">Network Logs</h4>
+
+<p><img src="/assets/blog_image/report2/n1.JPG" style="width: 800px; height: auto;" />
+<img src="/assets/blog_image/report2/nn1.png" style="width: 800px; height: auto;" /></p>
+
+<hr />
+
+<h2 id="energy-consumption-analysis">Energy Consumption Analysis</h2>
+
+<h3 id="baseline-system-clean">Baseline System (Clean)</h3>
+
+<p><strong>CPU</strong></p>
+<table>
+
+<tr>
+    <th>Performance Counter</th>
+    <th>Instance</th>
+    <th>Machine</th>
+    <th>Mean (%)</th>
+    <th>Minimum (%)</th>
+    <th>Maximum (%)</th>
+</tr>
+
+
+<tr>
+    <td>% C1 Time</td>
+    <td><span class="instance-tag">_Total</span></td>
+    <td>DESKTOP-42QFN1J</td>
+    <td class="mid-val">70</td>
+    <td>0</td>
+    <td>87</td>
+</tr>
+<tr>
+    <td>% C2 Time</td>
+    <td><span class="instance-tag">_Total</span></td>
+    <td>DESKTOP-42QFN1J</td>
+    <td class="low-val">0</td>
+    <td>0</td>
+    <td>0</td>
+</tr>
+<tr>
+    <td>% C3 Time</td>
+    <td><span class="instance-tag">_Total</span></td>
+    <td>DESKTOP-42QFN1J</td>
+    <td class="low-val">0</td>
+    <td>0</td>
+    <td>0</td>
+</tr>
+<tr>
+    <td>% DPC Time</td>
+    <td><span class="instance-tag">_Total</span></td>
+    <td>DESKTOP-42QFN1J</td>
+    <td class="low-val">0.104</td>
+    <td>0</td>
+    <td>3</td>
+</tr>
+<tr>
+    <td>% Idle Time</td>
+    <td><span class="instance-tag">_Total</span></td>
+    <td>DESKTOP-42QFN1J</td>
+    <td class="mid-val">70</td>
+    <td>0</td>
+    <td>87</td>
+</tr>
+<tr>
+    <td>% Interrupt Time</td>
+    <td><span class="instance-tag">_Total</span></td>
+    <td>DESKTOP-42QFN1J</td>
+    <td class="low-val">0.13</td>
+    <td>0</td>
+    <td>3</td>
+</tr>
+<tr>
+    <td>% Privileged Time</td>
+    <td><span class="instance-tag">_Total</span></td>
+    <td>DESKTOP-42QFN1J</td>
+    <td class="low-val">13</td>
+    <td>0</td>
+    <td>84</td>
+</tr>
+<tr style="background-color:rgb(0, 0, 0);">
+    <td>% Processor Time</td>
+    <td><span class="instance-tag">_Total</span></td>
+    <td>DESKTOP-42QFN1J</td>
+    <td class="low-val">18</td>
+    <td>0.458</td>
+    <td class="high-val">100</td>
+</tr>
+<tr>
+    <td>% User Time</td>
+    <td><span class="instance-tag">_Total</span></td>
+    <td>DESKTOP-42QFN1J</td>
+    <td class="low-val">5</td>
+    <td>0</td>
+    <td>40</td>
+</tr>
+
+</table>
+<ul>
+  <li>Avg Utilization: 18%</li>
+  <li>Duration: 300 seconds</li>
+  <li>CPU Load Index: <code class="language-plaintext highlighter-rouge">18 × 300 = 5,400</code></li>
+</ul>
+
+<p><strong>Disk</strong></p>
+<table>
+<tr>
+    <th>Disk Number</th>
+    <th>Reads / sec</th>
+    <th>Kb / Read</th>
+    <th>Writes / sec</th>
+    <th>Kb / Write</th>
+</tr>
+<tr>
+    <td><span class="highlight">0</span></td>
+    <td>32.9</td>
+    <td>17</td>
+    <td>12.5</td>
+    <td>224</td>
+</tr>
+</table>
+<ul>
+  <li>Writes/sec: 12.5</li>
+  <li>Disk Load Index: <code class="language-plaintext highlighter-rouge">3,750</code></li>
+  <li>Data Written: ~820 MB</li>
+</ul>
+
+<p><strong>Total Baseline Energy Index:</strong><br />
+<code class="language-plaintext highlighter-rouge">9,150</code></p>
+
+<hr />
+
+<h3 id="infected-system-ransomware-active">Infected System (Ransomware Active)</h3>
+
+<p><strong>CPU</strong></p>
+<table>
+<tr>
+    <th>Performance Counter</th>
+    <th>Mean (%)</th>
+    <th>Min (%)</th>
+    <th>Max (%)</th>
+</tr>
+<tr>
+    <td>% C1 Time</td>
+    <td class="val-mid">52</td>
+    <td>1</td>
+    <td>94</td>
+</tr>
+<tr>
+    <td>% C2 Time / % C3 Time</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+</tr>
+<tr>
+    <td>% DPC Time</td>
+    <td>0.893</td>
+    <td>0</td>
+    <td>7</td>
+</tr>
+<tr>
+    <td>% Idle Time</td>
+    <td class="val-mid">52</td>
+    <td>1</td>
+    <td>94</td>
+</tr>
+<tr>
+    <td>% Interrupt Time</td>
+    <td>0.37</td>
+    <td>0</td>
+    <td>4</td>
+</tr>
+<tr>
+    <td>% Privileged Time</td>
+    <td class="val-mid">30</td>
+    <td>0</td>
+    <td>82</td>
+</tr>
+<tr style="background-color:rgb(0, 0, 0);">
+    <td>% Processor Time</td>
+    <td class="val-high">37</td>
+    <td>0.691</td>
+    <td class="val-high">99</td>
+</tr>
+<tr>
+    <td>% User Time</td>
+    <td>7</td>
+    <td>0</td>
+    <td>45</td>
+</tr>
+</table>
+<ul>
+  <li>Avg Utilization: 37%</li>
+  <li>CPU Load Index: <code class="language-plaintext highlighter-rouge">11,100</code></li>
+</ul>
+
+<p><strong>Disk</strong></p>
+<table>
+<tr>
+    <th>Disk #</th>
+    <th>Reads / sec</th>
+    <th>Kb / Read</th>
+    <th>Writes / sec</th>
+    <th>Kb / Write</th>
+</tr>
+<tr>
+    <td>0</td>
+    <td class="highlight">356.7<span class="sub-label">PEAK I/O</span></td>
+    <td>22</td>
+    <td class="highlight">267.5<span class="sub-label">ENCRYPTION STREAM</span></td>
+    <td>64</td>
+</tr>
+</table>
+
+<ul>
+  <li>Writes/sec: 267.5</li>
+  <li>Disk Load Index: <code class="language-plaintext highlighter-rouge">80,250</code></li>
+  <li>Data Written: ~5.1 GB</li>
+</ul>
+<table class="metric-table">
+<tr>
+    <th>Metric</th>
+    <th>Value</th>
+</tr>
+<tr>
+    <td>Writes/sec</td>
+    <td>267.5 <span class="unit">ops/s</span></td>
+</tr>
+<tr>
+    <td>KB/Write</td>
+    <td>64 <span class="unit">KB</span></td>
+</tr>
+<tr>
+    <td>Duration</td>
+    <td>300 <span class="unit">seconds</span></td>
+</tr>
+<tr>
+    <td>Total Data Written</td>
+    <td>5,136,000 <span class="unit">KB (~4.9 GB)</span></td>
+</tr>
+</table>
+
+<p><strong>Total Infected Energy Index:</strong><br />
+<code class="language-plaintext highlighter-rouge">91,350</code></p>
+
+<hr />
+
+<h2 id="baseline-vs-infected-comparison">Baseline vs Infected Comparison</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>Energy Index</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Clean</td>
+      <td>9,150</td>
+    </tr>
+    <tr>
+      <td>Infected</td>
+      <td>91,350</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>≈ 10× increase in energy consumption</strong></p>
+
+<hr />
+
+<h2 id="final-conclusion">Final Conclusion</h2>
+
+<p>TeslaCrypt ransomware not only encrypts user data but also causes <strong>severe CPU and disk stress</strong>, leading to <strong>significant energy waste</strong>.<br />
+This highlights ransomware as both a <strong>cybersecurity threat</strong> and an <strong>environmental concern</strong>, increasing carbon emissions through unnecessary system load.</p>
+
+<hr />
+
+<h2 id="disclaimer">Disclaimer</h2>
+
+<p>This analysis is strictly for <strong>educational and research purposes</strong>.<br />
+No live systems were harmed during testing.<br />
+<em>Source: Original PDF Analysis Report</em> :<a href="https://www.linkedin.com/posts/punit-sharma-68b49425a_report2-activity-7421884787394543616--Nca">contentReference</a></p>
+
+
+</div>
+
+
+<div class="comments">
+<div id="disqus_thread"></div>
+<script>
+ var disqus_config = function () {
+     this.page.url = '/analysis/2026/01/28/TeslaCrypt.html';
+     this.page.identifier = '/analysis/2026/01/28/TeslaCrypt';
+     this.page.title = 'Ransomware TeslaCrypt';
+ };
+
+ (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+     var d = document, s = d.createElement('script');
+
+     s.src = '//bitbrain-github-io.disqus.com/embed.js';
+
+     s.setAttribute('data-timestamp', +new Date());
+     (d.head || d.body).appendChild(s);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+
+
+
+<div class="related">
+  <h2>related posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/analysis/2025/11/01/Malware-Analysis-Lab.html">
+            🛡️ Malware Analysis Lab Setup Guide
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/02/02/How-make-Linex-Persistent-drive.html">
+            how to make persistence drive
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/02/01/ZUZE_GAME_OVER.html">
+            ZUZE_GAME_OVER
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+  
+  <h2>all tags</h2>
+  <div class="tag-cloud"><a href="/tag/introduction/" class="set-1">introduction</a> <a href="/tag/malware_analysis/" class="set-5">malware_analysis</a> <a href="/tag/miscellaneous/" class="set-1">miscellaneous</a> <a href="/tag/welcome/" class="set-3">welcome</a></div>
+  
+
+
+
+
+<script>
+  let i = 0;
+  const text = 'tatic and dynamic analysis of TeslaCrypt ransomware, including API behavior, string evidence, network communication, and energy consumption impact.';
+  const speed = parseInt('50');
+  
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById('animated-post-description').innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+  document.getElementById('animated-post-description').style.display = 'initial';
+  typeWriter();
+
+  // Image modal
+  var $imgs = [];
+  $('img').each(function(idx) {
+    var obj = {
+      src: $(this).attr('src')
+    }
+    $imgs.push(obj);
+    var elem = $(this);
+    $(this).click(function() {
+      $('.modal').magnificPopup('open', idx);
+    });
+  });
+
+  $('.modal').magnificPopup({
+    items: $imgs,
+    type: 'image',
+    closeOnContentClick: true,
+    mainClass: 'mfp-img-mobile',
+    image: {
+      verticalFit: true
+    }
+    
+  });
+</script>
+
+      </div>
+    </main><footer class="site-footer">
+  <div class="wrapper">
+    <div class="credits"><a href="https://github.com/bitbrain/jekyll-dash">dash</a> theme for Jekyll by <a href="https://github.com/bitbrain">bitbrain</a> made with <i class="fas fa-heart"></i><div class="toggleWrapper">
+    <input type="checkbox" class="dn" id="theme-toggle" onclick="modeSwitcher()" checked />
+    <label for="theme-toggle" class="toggle">
+    <span class="toggle__handler">
+      <span class="crater crater--1"></span>
+      <span class="crater crater--2"></span>
+      <span class="crater crater--3"></span>
+    </span>
+        <span class="star star--1"></span>
+        <span class="star star--2"></span>
+        <span class="star star--3"></span>
+        <span class="star star--4"></span>
+        <span class="star star--5"></span>
+        <span class="star star--6"></span>
+    </label>
+</div>
+<script type="text/javascript">
+const theme = localStorage.getItem('theme');
+
+if (theme === "light") {
+    document.documentElement.setAttribute('data-theme', 'light');
+} else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+}
+const userPrefers = getComputedStyle(document.documentElement).getPropertyValue('content');
+
+function activateDarkTheme() {
+    document.getElementById('theme-toggle').checked = true;
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.documentElement.classList.add('theme--dark');
+    document.documentElement.classList.remove('theme--light');
+	document.getElementById("theme-toggle").className = 'light';
+	window.localStorage.setItem('theme', 'dark');
+}
+
+function activateLightTheme() {
+    document.getElementById('theme-toggle').checked = false;
+    document.documentElement.setAttribute('data-theme', 'light');
+    document.documentElement.classList.add('theme--light');
+    document.documentElement.classList.remove('theme--dark');
+	document.getElementById("theme-toggle").className = 'dark';
+	window.localStorage.setItem('theme', 'light');
+}
+
+if (theme === "dark") {
+    activateDarkTheme();
+} else if (theme === "light") {
+    activateLightTheme();
+} else if  (userPrefers === "light") {
+    activateDarkTheme();
+} else {
+    activateDarkTheme();
+}
+
+function modeSwitcher() {
+	let currentMode = document.documentElement.getAttribute('data-theme');
+	if (currentMode === "dark") {
+	    activateLightTheme();
+	} else {
+	    activateDarkTheme();
+	}
+}
+</script></div>
+  </div>
+</footer>
+
+
+<script>
+      window.FontAwesomeConfig = {
+        searchPseudoElements: true
+      }
+    </script>
+  </body>
+
+</html>
